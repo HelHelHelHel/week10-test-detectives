@@ -27,8 +27,8 @@
     <section class="detective-assign">
         <h2>Hire a detective</h2>
 
-        <form action="" method="post">
-
+        <form action="/detective" method="post">
+        @csrf
             <input type="text" name="subject" placeholder="What crime has been commited?">
 
             <textarea name="description" placeholder="Thorough description"></textarea>

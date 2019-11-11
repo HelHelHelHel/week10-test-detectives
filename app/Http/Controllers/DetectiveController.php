@@ -19,4 +19,19 @@ class DetectiveController extends Controller
         $view->detective = $detective;
         return $view;
     }
+    public function index() 
+    {
+        $detectives = Detective::orderBy('name', 'asc')->get();
+        return view('detective/index', compact('detectives'));
+        
+    }
+
+    public function handleForm(Request $request) 
+    {
+        // $request = request(); alternative to injecting in method parameters
+        
+        $search_term = $request->input('search');
+        dd($search_term);
+        return 'yay!';
+    }
 }

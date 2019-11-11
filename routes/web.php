@@ -12,7 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('index');
+})->name('index');
 
+Route::get('/detective/{slug}', 'DetectiveController@show');
+Route::get('/detectives', 'DetectiveController@index');
+Route::post('/detective/form', 'DetectiveController@handleForm');
 Auth::routes();
