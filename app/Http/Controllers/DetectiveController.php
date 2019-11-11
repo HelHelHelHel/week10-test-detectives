@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Detective;
 use Illuminate\Http\Request;
 
 class DetectiveController extends Controller
@@ -21,8 +21,8 @@ class DetectiveController extends Controller
     }
     public function index() 
     {
-        $detectives = Detective::orderBy('name', 'asc')->get();
-        return view('detective/index', compact('detectives'));
+        $detective = Detective::orderBy('name', 'asc')->get();
+        return view('detective/index');
         
     }
 
@@ -30,8 +30,7 @@ class DetectiveController extends Controller
     {
         // $request = request(); alternative to injecting in method parameters
         
-        $search_term = $request->input('search');
-        dd($search_term);
-        return 'yay!';
+        
+         
     }
 }

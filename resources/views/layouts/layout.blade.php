@@ -7,7 +7,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="{{ mix('/css/main.css') }}">
 </head>
 <body>
 

@@ -16,6 +16,6 @@ Route::get('/', function () {
 })->name('index');
 
 Route::get('/detective/{slug}', 'DetectiveController@show');
-Route::get('/detectives', 'DetectiveController@index');
+Route::get('/detectives', 'DetectiveController@index')->name('detective_index');
 Route::post('/detective/form', 'DetectiveController@handleForm');
 Auth::routes();
