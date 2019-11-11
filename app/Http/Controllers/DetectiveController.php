@@ -22,7 +22,7 @@ class DetectiveController extends Controller
     public function index() 
     {
         $detective = Detective::orderBy('name', 'asc')->get();
-        return view('detective/index');
+        return view('detective/index', compact('detective'));
         
     }
 
